@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<body>
+<div class="content">
+    <div>
+        <h1>Dictionary</h1>
+        <table>
+            <th>
+            <th><span>Tieng Anh</span></th>
+
+            <th><span>Tieng Viet</span></th>
+            </tr>
+            <tr>
+                <th><button type="button" onclick="check()">TRANSLATE</button></th>
+                <td><input type="text" id="nhap"/></td>
+                <td><input type="text" id="dich"/></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function check() {
+            let nhap = document.getElementById('nhap').value;
+            let dich = document.getElementById('dich');
+            let eng = ['hello', 'student', 'address', 'name', 'age', 'number', 'phone', 'love', 'hate', 'kiss'];
+            let vie = ['chao', 'hoc sinh', 'dia chi', 'ten', 'tuoi', 'so', 'dien thoai', 'yeu', 'ghet', 'hon'];
+            let i;
+            for (i = 0; i < eng.length; i++) {
+                if (nhap === eng[i]) {
+                    document.getElementById('dich').value = vie[i];
+                    break;
+                }
+            }
+            if(i==eng.length) {
+                alert("khong co trong tu dien");
+            }
+        }
+    </script>
+</body>
+</html>
